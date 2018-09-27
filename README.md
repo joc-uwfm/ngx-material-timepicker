@@ -2,6 +2,8 @@
 
 Handy [material design](https://material.io/guidelines/components/pickers.html#pickers-time-pickers) timepicker for Angular 6.0+
 
+### This fork adds the option to specify minute increments
+
 ## Demo
 
 https://agranom.github.io/ngx-material-timepicker/
