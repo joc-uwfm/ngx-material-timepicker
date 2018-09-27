@@ -75,6 +75,10 @@ export class NgxMaterialTimepickerComponent implements OnInit, OnDestroy {
         return this.timepickerInput && this.timepickerInput.max;
     }
 
+    get minuteIncrements(): number {
+        return this.timepickerInput && this.timepickerInput.minuteIncrements;
+    }
+
     get disabled(): boolean {
         return this.timepickerInput && this.timepickerInput.disabled;
     }

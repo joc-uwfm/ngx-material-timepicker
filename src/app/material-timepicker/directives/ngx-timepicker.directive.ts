@@ -6,7 +6,8 @@ import {
     Input,
     OnChanges,
     OnDestroy,
-    SimpleChanges
+    SimpleChanges,
+    Output
 } from '@angular/core';
 import {NgxMaterialTimepickerComponent} from '../ngx-material-timepicker.component';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
@@ -88,6 +89,17 @@ export class TimepickerDirective implements ControlValueAccessor, OnDestroy, OnC
             return;
         }
         this._max = value;
+    }
+
+    private _minuteIncrements: number = 1;
+
+    @Input()
+    set minuteIncrements(value: number) {
+        this._minuteIncrements = value;
+    }
+
+    get minuteIncrements() {
+        return this._minuteIncrements;
     }
 
     private _value: string;
